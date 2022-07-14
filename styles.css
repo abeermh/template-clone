@@ -1,0 +1,251 @@
+
+ :root{
+    --header-color:white;
+    --header-text:#7c99a7;
+    --logoname-color:rgba(83, 83, 83, 0.4);
+}   
+
+html{
+    scroll-behavior: smooth;
+}
+
+ * {
+     font-family: 'Quicksand', sans-serif;
+     font-family: 'Raleway', sans-serif;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+
+
+
+nav{
+    width: 100%;
+    background-color: var(--header-color);
+    position:fixed;
+    display: flex;
+    align-items:center;
+    padding:1.2em;
+    box-shadow:  0px 5px 40px var(--header-text);
+    z-index: 1;
+ 
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+#nav-bar{
+    margin-left: auto;
+ }
+
+ ul li{
+   padding:0 .5em; 
+ }
+
+li a{
+    text-decoration: none;
+    color: var(--header-text);
+}
+
+ul li a:hover {
+    background-color: var(--header-text);
+    color:var(--header-color);
+}
+
+
+#logo-sec{
+  display: grid;
+  place-items: center;
+  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3,1fr);  
+}
+ #logo-img{
+     width:100%;
+    height:100%;
+    grid-row: 1/4;
+    grid-column: 1/4;
+  }
+
+ #textoverimg{
+    grid-row:2/3;
+    grid-column:2/3;
+    width:auto;
+    font-size: 3rem;
+    color: var(--header-text);
+    font-weight: normal;
+    border: none ;}
+
+ #logoname{
+    font-size: 3rem;
+    background-color:var(--header-text);
+    padding : 0 10px;
+    font-weight: bold;;
+    color: var(--header-color);
+ }
+
+
+ #project-sec{
+     display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px ,1fr));
+    grid-template-rows: 10% repeat(2,1fr);
+    gap: 2em;
+    padding: 2em;
+    align-items: center;
+    justify-items: center;
+  } 
+
+ section  h1{
+     grid-column: 1/-1;
+     grid-row: 1/2;
+     margin: auto 0;
+     padding-bottom: 10px;
+     border-bottom: .5px inset lightgray;
+     color: var(--header-text);
+     text-align: left;
+     width:100%
+ }
+
+ #project-sec figure{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 1fr;
+}
+
+ #project-sec figure figcaption{
+    grid-column:1/-1;
+    grid-row: 1/2;  
+    background-color: black;
+    color:white;
+    padding :10px;
+
+  }
+
+ #project-sec figure img{
+    width: 100%;
+    height: 100%;
+    
+ }
+
+#About-sec{
+    width: 100%;
+     display: grid;
+    grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+    padding: 2em;
+    gap: 2em;
+    align-items: center;
+    justify-items: center;
+    margin-top: 5em;
+} 
+
+#about-header{
+    grid-column:1/-1;
+    grid-row: 1/2;
+}
+
+#about-intro{
+    grid-column:1/-1;
+    grid-row:2/3;
+
+}
+ 
+.card{
+    width:100%;
+    height: 100%;
+    margin:20px;  
+
+  }
+
+.card img{
+     width: 100%;
+    
+}
+
+.card h1{
+    border-bottom:none
+}
+
+.card p{
+    margin: 1em 0;
+}
+
+.card button{
+    padding: 1em;
+    width: 100%;
+    border:none;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+   padding:1em;
+   margin:0 2em;
+}
+
+form legend{
+    padding-top: 1em;   
+}
+
+input[type=text]{
+    padding: 1em;
+    margin: 1em 0em;
+    border: .5px solid gray;
+    border-radius:5px;
+}
+
+form button{
+    width: 50%;
+      padding:1em 2em;
+      border: none;
+      border-radius:5px;
+      background-color:black;
+      color:gray
+}
+
+#zoomout{
+    margin: 0 2.5em;
+}
+
+#zoomout img{
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+footer{
+    background-color: black;
+    color:gray;
+    text-align: center;
+    padding :2rem;
+}
+
+footer a{
+    color:gray;
+}
+
+
+
+@media screen and (max-width:600px) {
+    body{
+        font-size:10px;
+    }
+
+    #nav-bar{
+        display: none;
+        
+    }
+
+    #logospantext{
+        display: none;
+    }
+
+    #logoname{
+        font-size: 1.5rem;
+    }
+
+     
+}
